@@ -1,10 +1,8 @@
 {
-  "name": "sample-ng15-webpack-babel-karma",
+  "name": "angularjs-webpack-karma-jasmine",
   "version": "1.0.0",
   "description": "Sample repository showing integration of Angular 1.5, webpack, babel, and karma tests",
   "main": "index.js",
-  "author": "Kamran Ayub <kamran.ayub@gmail.com>",
-  "license": "MIT",
   "private": true,
   "dependencies": {
     "angular": "1.5.5"
@@ -25,11 +23,14 @@
     "karma-webpack": "2.0.4",
     "raw-loader": "0.5.1",
     "serve": "6.2.0",
-    "webpack": "3.6.0"
+    "webpack": "3.6.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "2.9.1"
   },
   "scripts": {
     "start": "concurrently \"npm run build:watch\" \"npm run serve\"",
     "serve": "serve ./build",
+    "start:dev": "webpack-dev-server",
     "build": "webpack",
     "build:watch": "webpack --watch",
     "test": "karma start karma.config.js"
